@@ -11,7 +11,7 @@ ft_strlen:
 	xor rcx, rcx		; initialize counter to 0
 
 .loop:
-	mov al, [rdi + rcx] ; move 1 byte data base on the counter index
+	mov al, [rdi + rcx] ; move 1 byte data base on the counter index to the register
 	test al, al			; check if the byte is '\0' by using test (AND compare but only affect FLAG)
 	je .return			; if empty flag = 1, means is null then jump to return part
 	inc rcx				; increment the counter by 1
