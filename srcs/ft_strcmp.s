@@ -23,8 +23,8 @@ ft_strcmp:
 	jmp .loop			; do the recursion again
 
 .diff:
-	movzx eax, al		; move *s1 which in al (8-bit) register to bigger eax (32-bit) register
-	movzx edx, dl		; move *s2 which in dl (8-bit) register to bigger edx (32-bit) register
+	movzx eax, al		; move *s1 which in al (8-bit) register to bigger eax (32-bit) register as return type is int (32-bit)
+	movzx edx, dl		; move *s2 which in dl (8-bit) register to bigger edx (32-bit) register as return type is int (32-bit)
 	sub eax, edx		; calculate the subtraction between *s1 and *s2
 	ret					; return the result in eax
 
