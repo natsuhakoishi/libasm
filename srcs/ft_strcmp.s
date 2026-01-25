@@ -12,8 +12,8 @@ ft_strcmp:
 	xor rax, rax		; initialize accumulate register to 0 for return usage
 
 .loop:
-	mov al, [rdi]		; move the current s1 character (*s1) to accumulate register
-	mov dl, [rsi]		; move the current s2 character (*s2) to general-purpose register
+	mov al, [rdi]		; move the current s1 character (*s1) to accumulate register (1 byte per move as al is 8-bit)
+	mov dl, [rsi]		; move the current s2 character (*s2) to general-purpose register (1 byte per move as dl is 8-bit)
 	cmp al, dl			; compare *s1 *s2
 	jne .diff			; jump to diff section if there are not equal
 	test al, al			; check if the byte is '\0' by using test (AND compare but only affect FLAG)
