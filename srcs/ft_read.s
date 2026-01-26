@@ -4,7 +4,7 @@ section .note.GNU-stack		; versions binutils 2.39+ will raise a warning without 
 ; rdi = fd
 ; rsi = buf
 ; rdx = count (size_t is unsigned)
-; if success return byte count read, else -1 and error no
+; if success return byte count read, else -1
 
 section .text
 	global ft_read
