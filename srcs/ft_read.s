@@ -20,7 +20,7 @@ ft_read:
 
 	; Error handling while result is signed number (-)
 	neg rax							; change the number to positive number as libc only accept positive number as errno
-	mov rdi, rax					; move the number to caller-saved register as temp storage as rdi already used while syscall, also next call function will overwrite rax
+	mov rdi, rax					; move the number to rdi as argument for errno function call
 
 	; get errno address (rax will default hold the return value as Application Binary Interface rule) and rax = &errno \
 	; here using With Respect To Procedure Linkage Table (wrt ..plt) flag as middle-man of function call to let dynamic linker to calculate the correct address

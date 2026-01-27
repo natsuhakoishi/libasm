@@ -4,9 +4,9 @@ OBJ_DIR = objs
 TEST_DIR = tests
 EXE_DIR = exes
 
-ASM_SRC = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
+ASM_SRC = ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s
 
-TEST_SRC = test_strlen.c test_strcpy.c test_strcmp.c test_write.c test_read.c
+TEST_SRC = test_strlen.c test_strcpy.c test_strcmp.c test_write.c test_read.c test_strdup.c
 
 ASM_SRCS = $(addprefix $(SRC_DIR)/, $(ASM_SRC))
 ASM_OBJS = $(addprefix $(OBJ_DIR)/, $(ASM_SRC:.s=.o))

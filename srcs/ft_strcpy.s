@@ -18,7 +18,7 @@ ft_strcpy:
 	test dl, dl			; check if the byte is '\0' by using test (AND compare but only affect FLAG)
 	je .return			; if empty flag = 1, means is null then jump to return part
 	inc rcx				; increment the counter by 1
-	jmp .loop			; do the recursion again
+	jmp .loop			; continue loop
 
 .return:
 	ret					; return the value in accumulate register

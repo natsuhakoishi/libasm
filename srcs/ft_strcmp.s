@@ -20,7 +20,7 @@ ft_strcmp:
 	je .equal			; if until end still no difference then jump to equal part
 	inc rdi				; *s1++
 	inc rsi				; *s2++
-	jmp .loop			; do the recursion again
+	jmp .loop			; continue loop
 
 .diff:
 	movzx eax, al		; move *s1 which in al (8-bit) register to bigger eax (32-bit) register as return type is int (32-bit)

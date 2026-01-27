@@ -2,6 +2,7 @@
 #include <errno.h>
 #include <stdio.h>
 #include <string.h>
+
 #include "color.h"
 
 ssize_t ft_write(int fd, const char *buf, size_t count);
