@@ -14,7 +14,7 @@ EXES = $(addprefix $(EXE_DIR)/, $(TEST_SRC:.c=))
 
 NASM = nasm
 NASM_FLAGS = -f elf64 -g
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -Wno-stringop-overread
 LDFLAGS = -L. -lasm
 
 all: $(NAME) $(EXES)
